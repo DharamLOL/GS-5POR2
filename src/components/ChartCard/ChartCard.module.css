@@ -16,3 +16,219 @@
   height: 300px; /* Ajuste a altura conforme necessário */
   width: 100%;
 }
+
+/* Novas estilizações adicionadas */
+.sectionTitle {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin: 32px 0 16px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ecf0f1;
+  font-weight: 600;
+}
+
+.chartSection {
+  margin-bottom: 32px;
+}
+
+/* Ações Sugeridas */
+.suggestionsSection {
+  margin: 32px 0;
+}
+
+.suggestionsGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.suggestionCard {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.suggestionCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.personName {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.priorityBadge {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.suggestionText {
+  color: #5a6c7d;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+/* Breakdown Section */
+.breakdownSection {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.breakdownExplanation p {
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.factorsGrid {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.factorItem {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.factorItem:hover {
+  transform: translateY(-2px);
+}
+
+.factorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.factorName {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.factorWeight {
+  background: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.factorDescription {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.interpretationGuide {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border-left: 4px solid #2196f3;
+}
+
+.interpretationGuide h5 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.interpretationGuide ul {
+  color: #5a6c7d;
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.interpretationGuide li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+.interpretationGuide strong {
+  color: #2c3e50;
+}
+
+.tip {
+  background: #e3f2fd;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border-left: 4px solid #2196f3;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #1565c0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .suggestionsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .factorsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chartContainer {
+    height: 250px;
+  }
+  
+  .sectionTitle {
+    font-size: 1rem;
+    margin: 24px 0 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+  
+  .chartContainer {
+    height: 200px;
+  }
+  
+  .suggestionCard,
+  .factorItem {
+    padding: 12px;
+  }
+  
+  .breakdownSection {
+    padding: 16px;
+  }
+}
