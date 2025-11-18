@@ -1,0 +1,64 @@
+.card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #f0f0f0;
+}
+
+.cardTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.scheduleItem {
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.scheduleItem:last-child {
+  margin-bottom: 0;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #007bff; /* Nome em azul */
+}
+
+.statusTag {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+.statusConfirmed { background-color: #28a745; } /* Verde */
+.statusPending { background-color: #ffc107; } /* Amarelo */
+.statusConflict { background-color: #dc3545; } /* Vermelho */
+
+.bottomRow {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem linha */
+  gap: 10px; /* Espaçamento entre os detalhes */
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.details {
+  background-color: #333;
+  padding: 3px 8px;
+  border-radius: 3px;
+}

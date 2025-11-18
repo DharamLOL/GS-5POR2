@@ -1,0 +1,123 @@
+.card {
+  background-color: #1a1a1a; /* Cor de fundo escura */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #f0f0f0; /* Texto claro */
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.leftControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerButton {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.monthYear {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.todayButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.rightControls {
+    display: flex;
+    gap: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.viewOption {
+    cursor: pointer;
+    padding: 3px 5px;
+}
+
+.viewOption:hover {
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 colunas para os dias da semana */
+  gap: 5px;
+  text-align: center;
+}
+
+.dayOfWeek {
+  font-weight: bold;
+  padding: 10px;
+  color: #aaa;
+}
+
+.dateCell {
+  min-height: 80px; /* Altura mínima para cada célula */
+  padding: 8px;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o número da data à esquerda */
+  position: relative;
+}
+
+.dateNumber {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+}
+
+.today {
+  border: 2px solid #007bff; /* Destaca o dia atual */
+}
+
+.scheduleItem {
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 0.75em;
+    margin-top: 3px;
+    width: 100%; /* Ocupa a largura total da célula */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.scheduleItem + .scheduleItem {
+    margin-top: 5px; /* Espaçamento entre múltiplos itens na mesma data */
+}
+
+.scheduleTime {
+    font-weight: bold;
+}
+.scheduleName {
+    font-size: 0.9em;
+}

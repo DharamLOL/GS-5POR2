@@ -1,0 +1,76 @@
+.card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #f0f0f0;
+}
+
+.cardTitle {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #007bff; /* Ícone da IA azul */
+}
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.matchItem {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.matchDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.matchName {
+  font-weight: bold;
+  color: white;
+}
+
+.matchReason {
+  font-size: 0.85em;
+  color: #bbb;
+}
+
+.matchScore {
+  font-weight: bold;
+  color: #28a745; /* Cor verde para o match score */
+  margin-right: 15px;
+  min-width: 80px; /* Garante que o score tenha largura mínima */
+  text-align: right;
+}
+
+.connectButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
