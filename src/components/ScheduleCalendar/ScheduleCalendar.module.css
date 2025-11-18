@@ -1,9 +1,9 @@
 .card {
-  background-color: #1a1a1a; /* Cor de fundo escura */
+  background-color: #FFFFFF; /* Fundo Branco */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave para fundo claro */
   padding: 20px;
-  color: #f0f0f0; /* Texto claro */
+  color: #333333; /* Texto escuro */
 }
 
 .calendarHeader {
@@ -20,9 +20,9 @@
 }
 
 .headerButton {
-  background-color: #333;
-  color: white;
-  border: none;
+  background-color: #EEEEEE; /* Fundo de botão cinza claro */
+  color: #333333; /* Cor do texto/ícone */
+  border: 1px solid #CCCCCC;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
@@ -48,7 +48,7 @@
 .rightControls {
     display: flex;
     gap: 15px;
-    border: 1px solid #444;
+    border: 1px solid #CCCCCC;
     border-radius: 5px;
     padding: 5px 10px;
 }
@@ -56,16 +56,17 @@
 .viewOption {
     cursor: pointer;
     padding: 3px 5px;
+    color: #333333;
 }
 
 .viewOption:hover {
-    background-color: #333;
+    background-color: #F0F0F0;
     border-radius: 3px;
 }
 
 .calendarGrid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 colunas para os dias da semana */
+  grid-template-columns: repeat(7, 1fr); 
   gap: 5px;
   text-align: center;
 }
@@ -73,17 +74,18 @@
 .dayOfWeek {
   font-weight: bold;
   padding: 10px;
-  color: #aaa;
+  color: #777777; /* Cor cinza para o nome do dia */
 }
 
 .dateCell {
-  min-height: 80px; /* Altura mínima para cada célula */
+  min-height: 80px; 
   padding: 8px;
-  background-color: #2a2a2a;
+  background-color: #FAFAFA; /* Fundo claro para a célula */
+  border: 1px solid #EEEEEE;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha o número da data à esquerda */
+  align-items: flex-start;
   position: relative;
 }
 
@@ -91,11 +93,11 @@
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 5px;
-  color: #f0f0f0;
+  color: #333333;
 }
 
 .today {
-  border: 2px solid #007bff; /* Destaca o dia atual */
+  border: 2px solid #FFC107; /* Amarelo/Laranja para destaque no fundo claro */
 }
 
 .scheduleItem {
@@ -105,14 +107,15 @@
     padding: 3px 5px;
     font-size: 0.75em;
     margin-top: 3px;
-    width: 100%; /* Ocupa a largura total da célula */
+    width: 100%;
     text-align: left;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Garante que o texto não saia da célula */
 }
 
 .scheduleItem + .scheduleItem {
-    margin-top: 5px; /* Espaçamento entre múltiplos itens na mesma data */
+    margin-top: 5px; 
 }
 
 .scheduleTime {
