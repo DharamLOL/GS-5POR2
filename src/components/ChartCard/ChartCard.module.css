@@ -1,0 +1,18 @@
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.cardTitle {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.chartContainer {
+  height: 300px; /* Ajuste a altura conforme necessário */
+  width: 100%;
+}

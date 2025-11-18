@@ -1,0 +1,57 @@
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+}
+
+.cardTitle {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.actionsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.actionsTable th,
+.actionsTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.actionsTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #555;
+}
+
+.actionsTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.priorityTag, .impactTag {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  min-width: 60px;
+}
+
+.priorityHigh { background-color: #dc3545; } /* Vermelho */
+.priorityMedium { background-color: #ffc107; } /* Amarelo */
+.priorityLow { background-color: #28a745; } /* Verde */
+
+.impactHigh { background-color: #28a745; } /* Verde */
+.impactMedium { background-color: #ffc107; } /* Amarelo */
+.impactLow { background-color: #dc3545; } /* Vermelho */
