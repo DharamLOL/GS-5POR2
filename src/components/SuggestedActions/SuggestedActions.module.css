@@ -1,57 +1,133 @@
 .card {
-  background-color: white;
+  background-color: #FFFFFF;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-}
-
-.cardTitle {
-  font-size: 1.2em;
-  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #333333;
   margin-bottom: 20px;
 }
 
+.cardTitle {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cardTitle svg {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* --- ESTILOS DA TABELA --- */
+
 .tableContainer {
-  overflow-x: auto;
+    overflow-x: auto;
 }
 
 .actionsTable {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaçamento entre as linhas */
 }
 
-.actionsTable th,
-.actionsTable td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.actionsTable thead th {
+    text-align: left;
+    color: #777;
+    font-weight: 600;
+    font-size: 0.9em;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
-.actionsTable th {
-  background-color: #f8f9fa;
-  font-weight: 600;
-  color: #555;
+.actionsTable tbody tr {
+    background-color: #FAFAFA;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
 }
 
 .actionsTable tbody tr:hover {
-  background-color: #f1f1f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
+.actionsTable tbody td {
+    padding: 15px 10px;
+    font-size: 0.9em;
+    vertical-align: middle;
+}
+
+/* Coluna Ação e Motivo */
+.actionsTable td:nth-child(1) { width: 40%; } 
+.actionsTable td:nth-child(2) { display: none; } 
+.actionsTable th:nth-child(2) { display: none; } 
+
+
+/* Estilos de Conteúdo */
+.actionText {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.reasonText {
+    display: block;
+    font-size: 0.8em;
+    color: #777;
+}
+
+
+/* --- TAGS DE PRIORIDADE E IMPACTO --- */
 
 .priorityTag, .impactTag {
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.85em;
-  font-weight: bold;
-  color: white;
-  display: inline-block;
-  text-align: center;
-  min-width: 60px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }
 
-.priorityHigh { background-color: #dc3545; } /* Vermelho */
-.priorityMedium { background-color: #ffc107; } /* Amarelo */
+/* PRIORIDADE */
+.priorityUrgent { background-color: #dc3545; } /* Vermelho */
+.priorityHigh { background-color: #ffc107; color: #333;} /* Amarelo */
+.priorityMedium { background-color: #007bff; } /* Azul */
 .priorityLow { background-color: #28a745; } /* Verde */
 
+/* IMPACTO */
 .impactHigh { background-color: #28a745; } /* Verde */
-.impactMedium { background-color: #ffc107; } /* Amarelo */
+.impactMedium { background-color: #ffc107; color: #333;} /* Amarelo */
 .impactLow { background-color: #dc3545; } /* Vermelho */
+
+/* --- BOTÃO DE AÇÃO --- */
+
+.actionColumn {
+    width: 150px;
+    text-align: center;
+}
+
+.implementButton {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.implementButton:hover {
+    background-color: #5a6268;
+}
+
+.implementButton svg {
+    margin-right: 5px;
+}
