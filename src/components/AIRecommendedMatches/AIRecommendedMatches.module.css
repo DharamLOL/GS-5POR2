@@ -1,76 +1,167 @@
 .card {
-  background-color: #1a1a1a;
+  background-color: #FFFFFF; /* Fundo Branco (Tema Calendário) */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   padding: 20px;
-  color: #f0f0f0;
+  color: #333333;
 }
 
 .cardTitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
+  color: #333333;
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
-  color: white;
-  display: flex;
-  align-items: center;
 }
 
-.icon {
+.cardTitle svg {
   margin-right: 10px;
-  color: #007bff; /* Ícone da IA azul */
+  color: #007bff;
 }
 
-.matchList {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* --- ALERTA DE HORA EXTRA --- */
+.alertBox {
+    background-color: #ffe0b2; /* Laranja suave */
+    border-left: 5px solid #ff9800; /* Borda laranja */
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.matchItem {
+.alertIcon {
+    color: #ff9800;
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.alertText {
+    font-size: 0.95em;
+    color: #333;
+}
+
+.alertText strong {
+    font-weight: bold;
+}
+
+/* --- TÍTULOS DE SEÇÃO --- */
+.sectionTitle {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555555;
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  background-color: #2a2a2a;
-  border-radius: 6px;
-  padding: 10px 15px;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 15px;
+.sectionTitle svg {
+  margin-right: 8px;
+  color: #007bff;
 }
 
-.matchDetails {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+.suggestionDescription {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 15px;
 }
 
-.matchName {
-  font-weight: bold;
-  color: white;
+/* --- SALDO DE HORAS E PROJEÇÃO --- */
+.balanceList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.matchReason {
-  font-size: 0.85em;
-  color: #bbb;
+.balanceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #EEEEEE;
 }
 
-.matchScore {
-  font-weight: bold;
-  color: #28a745; /* Cor verde para o match score */
-  margin-right: 15px;
-  min-width: 80px; /* Garante que o score tenha largura mínima */
-  text-align: right;
+.personName {
+    font-weight: bold;
+    font-size: 1em;
 }
 
-.connectButton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9em;
+.balanceValues {
+    font-size: 0.9em;
+    display: flex;
+    gap: 15px;
+}
+
+.currentBalance {
+    color: #777;
+}
+
+.projection {
+    font-weight: bold;
+}
+
+/* Cores de Status para Nomes */
+.statusHighRisk { color: #dc3545; } /* Vermelho: Risco de excesso */
+.statusNormal { color: #28a745; }   /* Verde: OK */
+.statusLow { color: #007bff; }      /* Azul: Deve horas */
+
+/* --- SUGESTÃO DE FOLGA --- */
+.suggestionList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3f2fd; /* Azul muito claro */
+    padding: 12px 15px;
+    border-radius: 4px;
+}
+
+.suggestionDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestionDate {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+}
+
+.suggestionDate svg {
+    margin-right: 8px;
+    color: #28a745; 
+}
+
+.suggestionReason {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.sendOfferButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.sendOfferButton:hover {
+    background-color: #0056b3;
 }

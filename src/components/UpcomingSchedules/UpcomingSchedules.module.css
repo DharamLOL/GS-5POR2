@@ -45,14 +45,37 @@
   color: white;
 }
 
-.statusConfirmed { background-color: #28a745; } /* Verde */
-.statusPending { background-color: #ffc107; } /* Amarelo */
-.statusConflict { background-color: #dc3545; } /* Vermelho */
+/* --- ESTILOS DE STATUS ATUALIZADOS/ADICIONADOS --- */
+/* Verde para Confirmado */
+.statusConfirmed { 
+    background-color: #28a745; 
+} 
+/* Amarelo para Pendente (e texto escuro para contraste) */
+.statusPending { 
+    background-color: #ffc107; 
+    color: #333; /* Texto escuro no fundo amarelo */
+} 
+/* Vermelho para Cancelado (substituindo .statusConflict) */
+.statusCanceled { 
+    background-color: #dc3545; 
+} 
+/* Novo: Cinza/Neutro para Troca Solicitada */
+.statusSwapRequested { 
+    background-color: #6c757d; 
+} 
+/* Novo: Ciano/Azul Claro para Em Análise */
+.statusInAnalysis { 
+    background-color: #00bcd4; 
+} 
+/* Mantendo Conflito caso seja usado (opcional) */
+.statusConflict { 
+    background-color: #dc3545; 
+} 
 
 .bottomRow {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem linha */
-  gap: 10px; /* Espaçamento entre os detalhes */
+  flex-wrap: wrap; 
+  gap: 10px; 
   font-size: 0.9em;
   color: #bbb;
 }

@@ -5,11 +5,10 @@ import Sidebar from '../../components/Sidebar/Sidebar'; // Caminho existente
 import Header from '../../components/Header/Header';    // Caminho existente
 import ScheduleCalendar from '../../components/ScheduleCalendar/ScheduleCalendar';
 
-
 import UpcomingSchedules from '../../components/UpcomingSchedules/UpcomingSchedules';
 import HourMarketplace from '../../components/HourMarketplace/HourMarketplace';
 import AIRecommendedMatches from '../../components/AIRecommendedMatches/AIRecommendedMatches';
-import OtherOffers from '../../components/OtherOffers/OtherOffers';
+
 import { FaFilter, FaPlus } from 'react-icons/fa';
 
 
@@ -33,7 +32,7 @@ const SchedulingCenter = () => {
           </div>
           <div className={styles.rightColumn}>
             <UpcomingSchedules />
-            <OtherOffers />
+            {/* <OtherOffers /> FOI REMOVIDO PARA CORRIGIR O ERRO */}
           </div>
         </div>
       </div>

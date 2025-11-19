@@ -1,29 +1,36 @@
 .card {
-  background-color: #1a1a1a;
+  background-color: #FFFFFF; /* Fundo Branco */
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
   padding: 20px;
-  color: #f0f0f0;
+  color: #333333; /* Texto principal escuro */
 }
 
 .cardHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .cardTitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
-  color: white;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.cardTitle svg {
+  margin-right: 10px;
+  color: #007bff; /* Azul para o ícone de mercado */
 }
 
 .historyButton {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 5px 10px;
+  background-color: #F0F0F0; /* Fundo de botão cinza claro */
+  color: #333333;
+  border: 1px solid #CCCCCC;
+  padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   display: flex;
@@ -37,33 +44,157 @@
 
 .description {
   font-size: 0.9em;
-  color: #aaa;
-  margin-bottom: 20px;
+  color: #777777; /* Texto de descrição cinza */
+  margin-bottom: 25px;
 }
 
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-  gap: 15px;
-  text-align: center;
+/* --- SEÇÃO DE TÍTULOS E GRIDS --- */
+
+.sectionTitle {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555555;
+  border-bottom: 1px solid #EEEEEE; /* Linha divisória clara */
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
-.statItem {
-  background-color: #2a2a2a;
-  border-radius: 5px;
-  padding: 15px 10px;
+.sectionTitle svg {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* --- 1. OFERTAS ATIVAS --- */
+.offerList {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
-.statLabel {
-  font-size: 0.8em;
-  color: #bbb;
-  margin-bottom: 5px;
+.offerItem {
+  background-color: #FAFAFA; /* Fundo levemente cinza para itens */
+  border-left: 4px solid #ffc107; /* Borda amarela para ofertas */
+  padding: 10px 15px;
+  border-radius: 4px;
 }
 
-.statValue {
-  font-size: 1.8em;
+.offerText {
+  font-size: 0.95em;
+  color: #333333;
+}
+
+/* --- 2. MATCHING SUGERIDO --- */
+.matchList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.matchItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: 1px solid #EEEEEE; /* Borda clara */
+}
+
+.matchDetails {
+  flex-grow: 1;
+}
+
+.matchOffer {
+  display: block;
+  font-size: 0.9em;
+  color: #777777;
+}
+
+.matchSuggestion {
   font-weight: bold;
-  color: #007bff; /* Azul para os números principais */
+  color: #28a745; /* Verde para sugestão */
+  font-size: 1em;
+}
+
+.matchActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.matchScore {
+  font-weight: bold;
+  color: #007bff;
+  min-width: 50px;
+  text-align: right;
+}
+
+.actionButton {
+  border: none;
+  color: white; /* Cor do ícone */
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.approveButton {
+  background-color: #28a745; /* Verde */
+}
+
+.rejectButton {
+  background-color: #dc3545; /* Vermelho */
+}
+
+/* --- 3. HISTÓRICO DE TRANSAÇÕES --- */
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.historyItem {
+  display: grid;
+  grid-template-columns: 50px 1fr 80px;
+  align-items: center;
+  background-color: #FAFAFA;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  border: 1px solid #EEEEEE;
+}
+
+.historyDate {
+  color: #777777;
+}
+
+.historyAction {
+  color: #333333;
+}
+
+.historyStatus {
+  padding: 3px 6px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.statusApproved {
+  background-color: #28a745;
+  color: white;
+}
+
+.statusCompleted {
+  background-color: #007bff;
+  color: white;
 }
