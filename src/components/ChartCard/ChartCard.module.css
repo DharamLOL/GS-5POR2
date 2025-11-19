@@ -1,234 +1,172 @@
+
 .card {
-  background-color: white;
+  background-color: #FFFFFF; 
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  padding: 20px;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
 .cardTitle {
-  font-size: 1.2em;
-  color: #333;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333333;
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.chartContainer {
-  height: 300px; /* Ajuste a altura conforme necessário */
-  width: 100%;
+.cardTitle svg {
+  margin-right: 10px;
+  color: #dc3545; /* Cor para o ícone de Bem-EEstar/Coração */
 }
 
-/* Novas estilizações adicionadas */
 .sectionTitle {
-  color: #34495e;
-  font-size: 1.1rem;
-  margin: 32px 0 16px 0;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #ecf0f1;
-  font-weight: 600;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #555555;
+  border-bottom: 1px solid #EEEEEE;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.chartSection {
-  margin-bottom: 32px;
+/* --- 1. GRÁFICO --- */
+.chartContainer {
+    position: relative;
+    height: 350px;
+    margin-bottom: 30px;
 }
 
-/* Ações Sugeridas */
+/* --- 2. SUGESTÕES DA IA (Lista de Ação) --- */
+
 .suggestionsSection {
-  margin: 32px 0;
+    margin-top: 30px;
 }
 
-.suggestionsGrid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.suggestionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-.suggestionCard {
-  background: #f8f9fa;
-  padding: 16px;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.suggestionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #EEEEEE;
 }
 
-.suggestionCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.suggestionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+.suggestionContent {
+    flex-grow: 1;
+    padding-right: 15px;
 }
 
 .personName {
-  font-weight: 600;
-  color: #2c3e50;
-  font-size: 0.95rem;
-}
-
-.priorityBadge {
-  color: white;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-transform: uppercase;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 3px;
 }
 
 .suggestionText {
-  color: #5a6c7d;
-  margin: 0;
-  line-height: 1.4;
-  font-size: 0.9rem;
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
 }
 
-/* Breakdown Section */
-.breakdownSection {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 24px;
+.reasonText {
+    /* Estilo para a razão dentro do card de sugestão */
+    display: block;
+    font-size: 0.75em;
+    color: #777;
+    margin-top: 3px;
+    font-style: italic;
 }
 
-.breakdownExplanation p {
-  color: #5a6c7d;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+.sendButton {
+    background-color: #28a745; /* Verde para Ação de Envio */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    min-width: 130px; /* Para manter o alinhamento */
+    justify-content: center;
 }
 
-.factorsGrid {
-  display: grid;
-  gap: 16px;
-  margin: 20px 0;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.sendButton:hover {
+    background-color: #1e7e34;
 }
 
-.factorItem {
-  background: white;
-  padding: 16px;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+.sendButton svg {
+    margin-right: 5px;
 }
 
-.factorItem:hover {
-  transform: translateY(-2px);
+
+/* --- 3. COMPARATIVO DE IMPACTO (TABELA) --- */
+
+.impactTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
-.factorHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+.impactTable th, .impactTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 0.9em;
 }
 
-.factorName {
-  font-weight: 600;
-  color: #2c3e50;
-  font-size: 0.95rem;
+.impactTable thead th {
+    background-color: #FAFAFA;
+    font-weight: 600;
+    color: #777;
 }
 
-.factorWeight {
-  background: #007bff;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 500;
+.impactTable tbody tr:hover {
+    background-color: #fcfcfc;
 }
 
-.factorDescription {
-  color: #6c757d;
-  font-size: 0.85rem;
-  margin: 0;
-  line-height: 1.4;
+.metricName {
+    font-weight: 600;
+    color: #555;
 }
 
-.interpretationGuide {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  border-left: 4px solid #2196f3;
+.improvementCell {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.interpretationGuide h5 {
-  color: #2c3e50;
-  margin-bottom: 12px;
-  font-size: 1rem;
+.improvementIcon {
+    margin-right: 5px;
 }
 
-.interpretationGuide ul {
-  color: #5a6c7d;
-  margin-bottom: 16px;
-  padding-left: 20px;
+/* Estilos de Cor para a Célula de Melhoria/Risco */
+.improvementCell[class*="FaArrowUp"] {
+    color: #28a745; /* Verde para scores de bem-estar subindo */
 }
 
-.interpretationGuide li {
-  margin-bottom: 8px;
-  line-height: 1.4;
-  font-size: 0.9rem;
-}
-
-.interpretationGuide strong {
-  color: #2c3e50;
+.improvementCell[class*="FaArrowDown"] {
+    color: #dc3545; /* Vermelho para risco caindo (o que é positivo) */
 }
 
 .tip {
-  background: #e3f2fd;
-  padding: 12px 16px;
-  border-radius: 6px;
-  border-left: 4px solid #2196f3;
-  margin: 0;
-  font-style: italic;
-  font-size: 0.9rem;
-  color: #1565c0;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .card {
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .suggestionsGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .factorsGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .chartContainer {
-    height: 250px;
-  }
-  
-  .sectionTitle {
-    font-size: 1rem;
-    margin: 24px 0 12px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
-    padding: 16px;
-  }
-  
-  .chartContainer {
-    height: 200px;
-  }
-  
-  .suggestionCard,
-  .factorItem {
-    padding: 12px;
-  }
-  
-  .breakdownSection {
-    padding: 16px;
-  }
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 15px;
 }
