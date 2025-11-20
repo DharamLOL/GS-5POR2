@@ -17,13 +17,13 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className={`${styles.navItem} ${styles.active}`}>
+            <a href="/" className={`${styles.navItem} ${styles.active}`}>
               <FaHeartbeat className={styles.icon} />
               Wellness Score
             </a>
           </li>
           <li>
-            <a href="#" className={styles.navItem}>
+            <a href="/escalas" className={styles.navItem}>
               <FaCalendarAlt className={styles.icon} />
               Escalas
             </a>
@@ -35,7 +35,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className={styles.navItem}>
+            <a href="/analytics" className={styles.navItem}>
               <FaChartBar className={styles.icon} />
               Analytics
             </a>
