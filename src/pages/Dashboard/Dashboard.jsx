@@ -1,100 +1,44 @@
-import React from "react";
-import styles from "./Dashboard.module.css";
+import React from 'react';
+import styles from './Dashboard.module.css';
+import Header from '../../components/Header/Header';
+import Card from '../../components/Card/Card';
+import Chart from '../../components/Chart/Chart';
+import Notification from '../../components/Notification/Notification';
+import Alert from '../../components/Alert/Alert';
+import Sidebar from '../../components/Sidebar/Sidebar'; // Caminho existente
 
-export default function Dashboard() {
+
+const Dashboard = () => {
   return (
-    <>
-      {/* Layout de duas colunas: conteúdo à esquerda, sidebar à direita */}
-      <div className={styles.pageLayout}>
-        {/* ---------- CONTEÚDO PRINCIPAL ------------------- */}
-        <main className={styles.mainContent}>
-          {/* Saudação */}
-          <div className={styles.greetingWrapper}>
-          <h1 className={styles.greeting}>Olá, Fabiano</h1>
-          </div>
+    <div className={styles.dashboard}>
+      <Header userName="Fabiano" />
 
-       {/* Três blocos de informação (lado a lado) */}
-          <div className={styles.infoRow}>
-            <div className={styles.infoBox}>
-           <h3 className={styles.infoTitle}>Próximos conflitos na escala</h3>
-            </div>
+      <section className={styles.cardsSection}>
+        <Card title="Próximos conflitos na escala" value={5} color="#dc3545" /> {/* Red */}
+        <Card title="Wellness da loja" value={75} unit="%" color="#ffc107" /> {/* Orange */}
+        <Card title="Horas extras disponíveis" value={12} color="#17a2b8" /> {/* Teal */}
+      </section>
 
-         <div className={styles.infoBox}>
-        <h3 className={styles.infoTitle}>Weliness da loja</h3>
-            </div>
-
-         <div className={styles.infoBox}>
-             <h3 className={styles.infoTitle}>Horas extras disponíveis</h3>
-            </div>
-          </div>
-
-          {/* Título – Fluxo de funcionários */}
-          <div className={styles.subtitleWrapper}>
-            <h2 className={styles.subtitle}>Fluxo de funcionários</h2>
-          </div>
-
-          {/* Placeholder do gráfico (ainda vazio) */}
-          <div className={styles.graphPlaceholder} />
-
-          {/* Título – Alerta */}
-          <div className={styles.titleWrapper}>
-          <h2 className={styles.title}>Alerta</h2>
-          </div>
-
-          {/* Conteúdo com borda externa */}
-          <div className={styles.outerBorder}>
-          <div className={styles.container}>
-              <div className={styles.boxOne}>
-          <p className={styles.textOne}>Papéis ociosos detectados</p>
-              </div>
-
-              <div className={styles.boxTwo}>
-                <p className={styles.textTwo}>Papéis ociosos detectados</p>
-              </div>
-
-              <div className={styles.boxThree}>
-                <p className={styles.textThree}>Papéis ociosos detectados</p>
-              </div>
-            </div>
-          </div>
-        </main>
-
-        {/* ------------------- SIDEBAR DIREITA ------------------- */}
-        <aside className={styles.notificationsSidebar}>
-          {/* ----- SEÇÃO DE PESQUISA (fica acima) ----- */}
-          <div className={styles.searchSection}>
-            <div className={styles.searchContainer}>
-              {/* Input com ícone de lupa dentro */}
-              <div className={styles.inputWrapper}>
-                <span className={styles.searchIcon}>🔍</span>
-                <input
-                  type="text"
-                  placeholder="Buscar…"
-                  className={styles.searchInput}
-                />
-              </div>
-
-            {/* Botão de filtro */}
-              <button className={styles.filterButton}>Filtrar</button>
-            </div>
-          </div>
-
-          {/* ----- SEÇÃO DE NOTIFICAÇÕES (abaixo) ----- */}
-          <div className={styles.notificationsSection}>
-            <h2 className={styles.notificationsTitle}>Notificações</h2>
-
-            <ul className={styles.notificationsList}>
-              <li className={styles.notificationItem}>
-                Nova escala criada com sucesso
-              </li>
-              <li className={styles.notificationItem}>Folgas alteradas</li>
-              <li className={styles.notificationItem}>
-                Nova análise disponível
-              </li>
-            </ul>
-          </div>
+      <section className={styles.mainContent}>
+        <div className={styles.chartArea}>
+          <Chart title="Fluxo de funcionários" />
+        </div>
+        <aside className={styles.notificationsArea}>
+          <h2 className={styles.sectionTitle}>Notificações</h2>
+          <Notification icon="plus" text="Nova escala criada com sucesso" type="success" />
+          <Notification icon="exchange" text="Folgas alteradas" type="info" />
+          <Notification icon="calendar" text="Nova análise disponível" type="warning" />
         </aside>
-      </div>
-    </>
+      </section>
+
+      <section className={styles.alertsSection}>
+        <h2 className={styles.sectionTitle}>Alertas</h2>
+        <Alert message="Papéis ociosos detectados" type="pending" />
+        <Alert message="Papéis ociosos detectados" type="info" />
+        <Alert message="Papéis ociosos detectados" type="success" />
+      </section>
+    </div>
   );
-}
+};
+
+export default Dashboard;

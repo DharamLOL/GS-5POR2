@@ -1,0 +1,176 @@
+/* src/components/RewardItem/RewardItem.module.css */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px; 
+    background-color: var(--bg-card); 
+    border-radius: 12px;
+    position: relative; 
+}
+
+/* Remove a borda inferior e adiciona espaçamento entre os cards */
+.item:not(:last-child) {
+    margin-bottom: 20px; 
+}
+.item:last-child {
+    border-bottom: none;
+}
+
+.lockedItem {
+    opacity: 0.6;
+}
+
+.iconBackground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.1); 
+    font-size: 1.5rem;
+    color: var(--accent-blue); 
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Cores específicas dos ícones (seguindo a ordem do mockData) */
+
+/* 1. Folga Extra (Guarda-sol) */
+.item:nth-child(1) .iconBackground {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: var(--text-secondary); 
+}
+
+/* 2. Troca Prioritária (Raio) */
+.item:nth-child(2) .iconBackground {
+    background-color: rgba(251, 191, 36, 0.1); 
+    color: var(--accent-gold); 
+}
+
+/* 3. Escolha de Turno (Presente) */
+.item:nth-child(3) .iconBackground {
+    background-color: rgba(217, 70, 239, 0.1); 
+    color: var(--accent-pink); 
+}
+
+/* 4. Vale Alimentação (Talheres) */
+.item:nth-child(4) .iconBackground {
+    background-color: rgba(59, 130, 246, 0.1); 
+    color: var(--accent-blue); 
+}
+
+/* 5. Home Office (Laptop) */
+.item:nth-child(5) .iconBackground {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: var(--text-secondary); 
+}
+
+
+.lockIcon {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    font-size: 1.2rem;
+    color: var(--text-secondary); 
+    background-color: var(--bg-card); 
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.details {
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cost {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+    min-width: 110px;
+    text-align: center;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.active {
+    /* Gradiente rosa/roxo para botões ativos */
+    background: linear-gradient(90deg, #d946ef 0%, #a855f7 100%); 
+    color: var(--text-primary);
+}
+
+.active:hover {
+    opacity: 0.9;
+}
+
+.disabled {
+    background-color: var(--bg-bar-track); 
+    color: var(--text-secondary);
+    font-weight: normal;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .item {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .iconBackground {
+        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    .details {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .header {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+    .button {
+        width: 100%;
+        min-width: unset;
+    }
+    .lockIcon { 
+        top: 40px;
+        right: calc(50% - 25px); 
+    }
+}

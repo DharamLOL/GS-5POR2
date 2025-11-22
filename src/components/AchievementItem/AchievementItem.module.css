@@ -1,0 +1,135 @@
+/* src/components/AchievementItem/AchievementItem.module.css */
+.item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--bg-achievement-item); /* Fundo sutil para cada item */
+    border-radius: 12px;
+    align-items: flex-start;
+}
+
+.lockedItem {
+    opacity: 0.6;
+}
+
+.iconWrapper {
+    font-size: 1.8rem;
+    color: var(--accent-blue); /* Cor padrão para ícones de conquista (troféu, luz) */
+    padding: 10px;
+    background-color: rgba(59, 130, 246, 0.1); /* Fundo azul claro para o círculo do ícone */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+/* Cor específica para o ícone do "Multitalento" (o segundo item na lista mockData) */
+.item:nth-child(2) .iconWrapper {
+    color: var(--accent-pink); /* Ícone de alvo rosa */
+    background-color: rgba(217, 70, 239, 0.1); /* Fundo rosa claro */
+}
+
+/* Cor específica para o ícone do "Colaborador Nota 10" (o quarto item na lista mockData) */
+.item:nth-child(4) .iconWrapper {
+    color: var(--accent-gold); /* Ícone de estrela dourada */
+    background-color: rgba(251, 191, 36, 0.1); /* Fundo dourado claro */
+}
+
+
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary); /* Cor do título da conquista */
+}
+
+.statusUnlocked { 
+    color: var(--green-success); /* Cor verde para checkmark de sucesso */
+    font-size: 0.9rem; 
+}
+.statusLocked { 
+    color: var(--text-secondary); /* Cor cinza para cadeado */
+    font-size: 0.9rem; 
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--accent-gold); /* Cor dos pontos da conquista */
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.description {
+    color: var(--text-secondary); /* Cor da descrição da conquista */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 4px;
+}
+
+.miniProgress {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: var(--text-secondary); /* Cor do texto "Progresso" */
+    width: 100%;
+}
+
+.progressInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.miniTrack {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-bar-track); /* Cor de fundo da trilha da mini-barra */
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.miniFill {
+    height: 100%;
+    background-color: var(--accent-gold); /* Cor de preenchimento da mini-barra */
+    border-radius: 3px;
+}
+
+/* Responsividade para itens de conquista */
+@media (max-width: 480px) {
+    .item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .iconWrapper {
+        margin-bottom: 10px;
+    }
+    .header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .points {
+        justify-content: center;
+    }
+}

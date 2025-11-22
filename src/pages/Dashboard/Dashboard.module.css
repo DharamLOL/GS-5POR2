@@ -1,198 +1,70 @@
-/* ==========================================================
-   Layout geral – duas colunas (main à esquerda, sidebar à direita)
-   ================================================= */
-.pageLayout {
-  display: flex;               /* duas colunas */
-  gap: 2rem;                   /* espaço entre elas */
-  padding: 1rem;
+/* src/pages/Dashboard/Dashboard.module.css */
+.dashboard {
+  padding: 20px;
 }
 
-/* ==============================================
-   Sidebar de Notificações (à direita)
-   ============================================== */
-.notificationsSidebar {
-  flex: 0 0 250px;          /* largura fixa */
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 1rem;
+.cardsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* ---------- SEÇÃO DE PESQUISA ---------- */
-.searchSection {
-  margin-bottom: 1rem;   /* espaço entre a pesquisa e a lista de notificações */
-}
-
-/* Container que agrupa input + botão */
-.searchContainer {
-  display: flex;
-  align-items: stretch;
-  gap: 0.5rem;
-}
-
-/* Wrapper que coloca o ícone dentro do input */
-.inputWrapper {
-  position: relative;
-  flex: 1;
-}
-
-/* Ícone de lupa (emoji, pode ser trocado por SVG) */
-.searchIcon {
-  position: absolute;
-  left: 0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  font-size: 1rem;
-  color: #777;
-}
-
-/* Input de busca */
-.searchInput {
-  width: 100%;
-  padding: 0.45rem 0.8rem 0.45rem 2rem; /* espaço à esquerda para o ícone */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.95rem;
-}
-
-/* Botão de filtro */
-.filterButton {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 0 0.9rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-.filterButton:hover {
-  background-color: #0056b3;
-}
-
-/* ---------- SEÇÃO DE NOTIFICAÇÕES ---------- */
-.notificationsSection {
-  /* nada especial ainda – serve apenas como separador lógico */
-}
-
-/* Título da sidebar */
-.notificationsTitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 0.75rem;
-}
-
-/* Lista de notificações */
-.notificationsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.notificationItem {
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 0.5rem;
-}
-
-/* ==========================================================
-   Área principal (conteúdo que já existia)
-   ========================================================= */
 .mainContent {
-  flex: 1;         /* ocupa o resto da largura */
-}
-
-/* ---------------------------------------------
-   Borda externa que envolve todo o dashboard
-   -------------------------------- */
-.outerBorder {
-  border: 2px solid #D3D3D3;
-  border-radius: 8px;
- padding: 1rem;
-  background-color: #D9D9D900; /* transparente */
-}
-
-/* Container interno (blocos) */
-.container {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* Blocos internos (papéis ociosos) */
-.boxOne,
-.boxTwo,
-.boxThree {
-  padding: 0.75rem;
-  border-radius: 6px;
+.chartArea {
+  flex: 3;
 }
 
-/* Cores/bordas dos blocos internos */
-.boxOne   { border: 2px solid #FAF3E1; background-color: #FAF3E1; }
-.boxTwo  { border: 2px solid #EAD8ED; background-color: #EAD8ED; }
-.boxThree { border: 2px solid #D1F0F7; background-color: #D1F0F7; }
-
-/* Texto dos blocos internos */
-.textOne   { color: #907300; margin: 0; }
-.textTwo   { color: #5E006E; margin: 0; }
-.textThre { color: #004352; margin: 0; }
-
-/* --------------------------------------------------
-   Títulos (saudação, Alerta, Fluxo de funcionários)
-   -------------------------------------------------- */
-.greetingWrapper { margin-bottom: 0.5rem; }
-.greeting {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #222;
-  margin: 0;
-}
-.titleWrapper { margin-bottom: 0.25rem; }
-.title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0;
-}
-.subtitleWrapper { margin-bottom: 0.5rem; }
-.subtitle {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #555;
-  margin: 0;
-}
-
-/* --------------------------------------------------
-   Linha de informação (três blocos lado a lado)
-   -------------------------------------------------- */
-.infoRow {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-.infoBox {
+.notificationsArea {
   flex: 1;
-  padding: 0.75rem;
-  border: none;                /* borda removida conforme pedido anterior */
-  border-radius: 6px;
-  background-color: #F7F6FB;
-}
-.infoTitle {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0;
-  text-align: left;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* --------------------------------------------------
-   PLACEHOLDER DO GRÁFICO
-   -------------------------------------------------- */
-.graphPlaceholder {
-  width: 100%;
-  height: 260px;
-  background-color: #fafafa;
-  border: 2px dashed #ccc;
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.alertsSection {
+  background-color: #ffffff;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsividade básica */
+@media (max-width: 992px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  .notificationsArea {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .actions {
+    margin-top: 15px;
+  }
+  .searchBar {
+    width: 100%;
+  }
+  .searchInput {
+    width: calc(100% - 40px);
+  }
 }

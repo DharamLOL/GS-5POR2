@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WellnessScore from "./pages/WellnessScore/WellnessScore.jsx";
 import SchedulingCenter from "./pages/SchedulingCenter/SchedulingCenter.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import { BiLayout } from "react-icons/bi";
+import Gamificacao from './pages/Gamificacao/Gamificacao';
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
 
         {/* Rota da nova página – Central de Escalas */}
         <Route path="/escalas" element={<SchedulingCenter />} />
+
+        <Route path="/Gamificacao" element={<Gamificacao/>} />
+
+
       </Routes>
     </BrowserRouter>
   );

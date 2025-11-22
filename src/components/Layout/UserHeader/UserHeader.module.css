@@ -1,0 +1,88 @@
+.card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 24px;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    background-color: var(--accent-blue);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.userName {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.userRole {
+    color: var(--text-secondary);
+}
+
+.pointsDisplay {
+    text-align: right;
+}
+
+.pointsValue {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.starIcon {
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+}
+
+.pointsLabel {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.wellnessHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.wellnessPercent {
+    color: var(--accent-blue);
+}
+
+@media (max-width: 768px) {
+    .topSection {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pointsDisplay, .pointsValue {
+        text-align: left;
+        justify-content: flex-start;
+    }
+}

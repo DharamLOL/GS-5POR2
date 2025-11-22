@@ -1,0 +1,55 @@
+/* src/components/Card/Card.module.css */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 250px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+.cardIcon {
+  font-size: 24px;
+}
+
+.cardContent {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.cardValue {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 5px;
+}
+
+.cardUnit {
+  font-size: 18px;
+  color: #777;
+}
+
+.cardFooter {
+  text-align: right;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #999;
+}

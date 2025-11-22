@@ -1,0 +1,12 @@
+/* src/styles/colors.css */
+:root {
+  --bg-main: #121420;        /* Fundo principal da aplicação */
+  --bg-card: #1b2030;        /* Fundo dos cards (cabeçalho, conquistas, loja) */
+  --text-primary: #ffffff;   /* Cor principal do texto (títulos, nomes) */
+  --text-secondary: #8a92a6; /* Cor secundária do texto (descrições) */
+  --accent-pink: #d946ef;    /* Cor de destaque rosa (botão ativo, ícone do multitalento) */
+  --accent-blue: #3b82f6;    /* Cor de destaque azul (avatar, barra de bem-estar) */
+  --accent-gold: #fbbf24;    /* Cor de destaque dourada (estrelas, ícones de seção) */
+  --bg-bar-track: #2c3347;   /* Cor de fundo da trilha da barra de progresso */
+  --green-success: #22c55e;  /* Cor para ícones de sucesso (checkmark) */
+}
