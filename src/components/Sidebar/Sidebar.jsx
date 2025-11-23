@@ -17,7 +17,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/" className={`${styles.navItem} ${styles.active}`}>
+            <a href="/WellnessScore" className={`${styles.navItem} ${styles.active}`}>
               <FaHeartbeat className={styles.icon} />
               Wellness Score
             </a>
