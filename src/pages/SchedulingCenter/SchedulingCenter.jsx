@@ -32,7 +32,7 @@ const SchedulingCenter = () => {
           </div>
           <div className={styles.rightColumn}>
             <UpcomingSchedules />
-            {/* <OtherOffers /> FOI REMOVIDO PARA CORRIGIR O ERRO */}
+  
           </div>
         </div>
       </div>
