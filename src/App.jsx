@@ -16,8 +16,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/WellnessScore" element={<WellnessScore />} />
         <Route path="/escalas" element={<SchedulingCenter />} />
-        <Route path="/Gamificacao" element={<Gamificacao/>} />
-        <Route path="/escalas" element={<SchedulingCenter />} /> 
+        <Route path="/Gamificacao" element={<Gamificacao/>} /> 
         <Route path="/analytics" element={<Analytics />} /> 
       </Routes>
     </BrowserRouter>

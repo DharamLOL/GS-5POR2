@@ -11,7 +11,7 @@ const Sidebar = () => {
       <nav className={styles.navigation}>
         <ul>
           <li>
-            <a href="#" className={styles.navItem}>
+            <a href="/" className={styles.navItem}>
               <FaTachometerAlt className={styles.icon} />
               Dashboard
             </a>
@@ -29,7 +29,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="#" className={styles.navItem}>
+            <a href="/Gamificacao" className={styles.navItem}>
               <FaStar className={styles.icon} />
               Gamificação
             </a>

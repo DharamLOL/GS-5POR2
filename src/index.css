@@ -29,17 +29,11 @@ a:hover {
 }
 
 body {
-
-  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: var(--bg-main);
-  color: var(--text-primary);
+  height: 100%;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-
 }
 
 h1 {
