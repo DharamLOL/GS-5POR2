@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Sidebar.module.css';
-import { FaTachometerAlt, FaHome, FaHeartbeat, FaCalendarAlt, FaStar, FaChartBar } from 'react-icons/fa'; // Exemplo de ícones, você pode usar outros.
+import { FaTachometerAlt, FaHome, FaHeartbeat, FaCalendarAlt, FaStar, FaChartBar } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
@@ -11,34 +12,34 @@ const Sidebar = () => {
       <nav className={styles.navigation}>
         <ul>
           <li>
-            <a href="/" className={styles.navItem}>
+            <Link to="/" className={styles.navItem}>
               <FaTachometerAlt className={styles.icon} />
               Dashboard
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/" className={`${styles.navItem} ${styles.active}`}>
+            <Link to="/wellness" className={`${styles.navItem} ${styles.active}`}>
               <FaHeartbeat className={styles.icon} />
               Wellness Score
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/escalas" className={styles.navItem}>
+            <Link to="/escalas" className={styles.navItem}>
               <FaCalendarAlt className={styles.icon} />
               Escalas
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/Gamificacao" className={styles.navItem}>
+            <Link to="/gamificacao" className={styles.navItem}>
               <FaStar className={styles.icon} />
               Gamificação
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/analytics" className={styles.navItem}>
+            <Link to="/analytics" className={styles.navItem}>
               <FaChartBar className={styles.icon} />
               Analytics
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
