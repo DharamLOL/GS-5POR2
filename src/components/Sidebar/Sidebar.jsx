@@ -18,7 +18,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/wellness" className={`${styles.navItem} ${styles.active}`}>
+            <Link to="/WellnessScore" className={`${styles.navItem} ${styles.active}`}>
               <FaHeartbeat className={styles.icon} />
               Wellness Score
             </Link>
@@ -30,7 +30,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/gamificacao" className={styles.navItem}>
+            <Link to="/Gamificacao" className={styles.navItem}>
               <FaStar className={styles.icon} />
               Gamificação
             </Link>

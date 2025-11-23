@@ -31,7 +31,7 @@ const Dashboard = () => {
             </div>
             <aside className={styles.notificationsArea}>
               <h2 className={styles.sectionTitle}>Notificações</h2>
-              <Notification icon="plus" text="Nova escala criada com sucesso" type="success" />
+              <Notification icon="plus" text="Gerar nova escala 5X2" type="success" />
               <Notification icon="exchange" text="Folgas alteradas" type="info" />
               <Notification icon="calendar" text="Nova análise disponível" type="warning" />
             </aside>
